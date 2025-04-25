@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinnerGenero"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/editTextIdade"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:digits="0123456789"
+        android:hint="Digite sua idade"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#9C27B0"
+        android:padding="10dp"
+        android:text="Calcular"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:icon="@drawable/baseline_mood_24"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewnome"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:icon="@drawable/baseline_mood_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textViewmsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:text="Annelise Bispo Amaral"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:icon="@drawable/baseline_mood_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>
