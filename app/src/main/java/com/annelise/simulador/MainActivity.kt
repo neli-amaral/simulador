@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             val idade = binding.editTextIdade.text.toString().toLong()
             Toast.makeText(this,idade.toString(), Toast.LENGTH_SHORT).show()
         }
+        binding
 
 
     }
