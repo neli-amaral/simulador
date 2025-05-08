@@ -14,27 +14,40 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityMainBinding
-    private lateinit var item:Spinner
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        item = binding.spinnerGenero
 
         val genero = listOf("Masculino", "Feminino")
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, genero)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, genero)
 
         binding.spinnerGenero.adapter = adapter
 
         binding.buttonCalc.setOnClickListener{
-            val idade = binding.editTextIdade.text.toString().toLong()
-            Toast.makeText(this,idade.toString(), Toast.LENGTH_SHORT).show()
+            val generoSelect = binding.spinnerGenero.selectedItem as String
+            var idade = binding.editTextIdade.text.toString().toLongOrNull()
+            var resultado:Long
+
+            if(generoSelect.trim()=="Masculino"){
+
+                resultado = 65 - idade!!
+                if(idade >= 65){
+                    resultado = 0
+                }
+                binding.textViewMsg.text= "Você já pode se aposentar"
+
+            }else{
+                resultado= 62 - idade!!
+                if(idade >= 62){
+                }
+                binding.textViewMsg.text= "Você já pode se aposentar"
+            }
+            binding.textViewMsg.text= "Faltam $resultado anos para você se aposentar"
         }
-        binding
 
 
     }

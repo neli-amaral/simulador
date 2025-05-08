@@ -5,20 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="50dp"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <Spinner
         android:id="@+id/spinnerGenero"
-        android:layout_width="146dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:padding="8dp" />
 
     <EditText
         android:id="@+id/editTextIdade"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:layout_marginTop="28dp"
         android:digits="0123456789"
         android:hint="Digite sua idade"
@@ -48,12 +48,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewnome"
-        android:layout_width="164dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/textViewMsg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:backgroundTint="@color/white"
-        android:padding="10dp"
-        android:text=""
+        android:padding="12dp"
+        tools:text="Resultado"
+        android:fontFamily="@font/gafien"
+        android:gravity="center_horizontal"
         android:textColor="@color/black"
         android:textSize="15dp"
         app:icon="@drawable/baseline_mood_24"
@@ -62,12 +64,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
-        android:id="@+id/textViewmsg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textViewNome"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:backgroundTint="@color/white"
         android:padding="10dp"
+        android:fontFamily="@font/gafien"
         android:text="Annelise Bispo Amaral"
+        android:gravity="center_horizontal"
         android:textColor="@color/black"
         android:textSize="15dp"
         app:icon="@drawable/baseline_mood_24"
